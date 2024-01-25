@@ -1,2 +1,2 @@
 require("eric")
-print("hello")
+require("lualine").setup()

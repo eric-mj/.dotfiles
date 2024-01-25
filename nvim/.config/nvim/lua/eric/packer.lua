@@ -10,16 +10,16 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
         -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
---    use({
---        'rose-pine/neovim',
---        as = 'rose-pine',
---        config = function()
---            vim.cmd('colorscheme rose-pine')
---        end
---    })
+    --    use({
+    --        'rose-pine/neovim',
+    --        as = 'rose-pine',
+    --        config = function()
+    --            vim.cmd('colorscheme rose-pine')
+    --        end
+    --    })
     use { "catppuccin/nvim", as = "catppuccin" }
 
     use({
@@ -34,6 +34,8 @@ return require('packer').startup(function(use)
         end
     })
 
+    use("nvim-lualine/lualine.nvim")
+    use("nvim-tree/nvim-web-devicons")
 
     use("nvim-treesitter/playground")
     use("theprimeagen/harpoon")
@@ -51,16 +53,16 @@ return require('packer').startup(function(use)
         branch = 'v3.x',
         requires = {
             --- Uncomment these if you want to manage LSP servers from neovim
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+            { 'williamboman/mason.nvim' },
+            { 'williamboman/mason-lspconfig.nvim' },
 
             -- LSP Support
-            {'neovim/nvim-lspconfig'},
+            { 'neovim/nvim-lspconfig' },
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'L3MON4D3/LuaSnip'},
-            {'rust-lang/rust.vim'}
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'L3MON4D3/LuaSnip' },
+            { 'rust-lang/rust.vim' }
         }
     }
     use("folke/zen-mode.nvim")
@@ -78,7 +80,5 @@ return require('packer').startup(function(use)
         run = function()
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
             ts_update()
-        end,}
-
-    end)
-
+        end, }
+end)
