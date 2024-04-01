@@ -8,6 +8,13 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {
+        "aznhe21/actions-preview.nvim",
+        config = function()
+            vim.keymap.set({ "v", "n" }, "gf", require("actions-preview").code_actions)
+        end,
+    }
+
+    use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
@@ -58,7 +65,7 @@ return require('packer').startup(function(use)
             { 'rust-lang/rust.vim' }
         }
     }
-    use("github/copilot.vim")
+    -- use("github/copilot.vim")
     use 'neovim/nvim-lspconfig'
     use 'simrat39/rust-tools.nvim'
 
