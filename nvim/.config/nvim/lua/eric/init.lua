@@ -1,3 +1,3 @@
 require("eric.remap")
-require("eric.packer")
 require("eric.set")
+require("eric.lazy_init")
