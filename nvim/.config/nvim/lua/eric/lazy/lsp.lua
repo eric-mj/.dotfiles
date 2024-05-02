@@ -33,7 +33,16 @@ return {
             handlers = {
                 function(server_name) -- default handler (optional)
                     require("lspconfig")[server_name].setup {
-                        capabilities = capabilities
+                        capabilities = capabilities,
+                        settings = {
+                            ["rust-analyzer"] = {
+                                diagnostics = {
+                                    disabled = {
+                                        "needless_return",
+                                    },
+                                },
+                            },
+                        },
                     }
                 end,
 
