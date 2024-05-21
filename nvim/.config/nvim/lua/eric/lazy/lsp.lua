@@ -13,6 +13,7 @@ return {
         "j-hui/fidget.nvim",
     },
 
+    vim.lsp.inlay_hint.enable(true),
     config = function()
         local cmp = require('cmp')
         local cmp_lsp = require("cmp_nvim_lsp")
