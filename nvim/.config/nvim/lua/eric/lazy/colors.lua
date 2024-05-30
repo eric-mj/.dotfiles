@@ -4,22 +4,15 @@ function ColorMyPencils(color)
     vim.api.nvim_set_hl(0, 'LineNr', { fg = "white" })
 end
 
-return
-
-{
-    "catppuccin-macchiato/nvim",
+return {
+    "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
     config = function()
-        require('catppuccin').setup({
-            disable_background = true,
-            styles = {
-                italic = false,
-            },
+        require("catppuccin").setup({
+            flavour = "macchiato", -- latte, frappe, macchiato, mocha
         })
-
-        vim.cmd("colorscheme catppuccin")
-
-        ColorMyPencils()
+        vim.cmd.colorscheme("catppuccin-macchiato")
+        vim.api.nvim_set_hl(0, 'LineNr', { fg = "white" })
     end
 }
