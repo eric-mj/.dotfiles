@@ -111,5 +111,5 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(zoxide init --cmd cd zsh)"
 
-alias vim="nvim ."
+alias vim="nvim"
 alias lg="lazygit"
