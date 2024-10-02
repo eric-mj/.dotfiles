@@ -1,0 +1,7 @@
+import = [
+    "~/.config/alacritty/themes/themes/catppuccin_macchiato.toml"
+]
+# Font config:
+[ font ]
+    # Normal (roman):
+    normal={ family= "CommitMono Nerd Font", style= "Regular" }
