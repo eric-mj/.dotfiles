@@ -111,5 +111,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(zoxide init --cmd cd zsh)"
 
+PATH=$PATH:~/google-cloud-sdk/bin
+
 alias vim="nvim"
 alias lg="lazygit"

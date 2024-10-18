@@ -5,3 +5,6 @@ import = [
 [ font ]
     # Normal (roman):
     normal={ family= "CommitMono Nerd Font", style= "Regular" }
+
+#[env]
+#    term = "xterm-256color"
