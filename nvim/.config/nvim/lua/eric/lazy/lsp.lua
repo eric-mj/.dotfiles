@@ -63,7 +63,7 @@ return {
 
                 -- Execute a code action, usually your cursor needs to be on top of an error
                 -- or a suggestion from your LSP for this to activate.
-                map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction', { 'n', 'x' })
+                map('<leader>vca', vim.lsp.buf.code_action, '[C]ode [A]ction', { 'n', 'x' })
 
                 -- WARN: This is not Goto Definition, this is Goto Declaration.
                 --  For example, in C this would take you to the header.
@@ -110,6 +110,7 @@ return {
 
         require("fidget").setup({})
         require("mason").setup()
+        require("lspconfig").protols.setup {}
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
