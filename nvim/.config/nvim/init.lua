@@ -1,5 +1,6 @@
 require("eric")
 require("lualine").setup()
+require('telescope').load_extension('fzf')
 vim.o.termguicolors = true
 
 -- [[rust-analyzer]]

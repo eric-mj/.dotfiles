@@ -44,4 +44,3 @@ return {
         vim.treesitter.language.register("templ", "templ")
     end
 }
-
