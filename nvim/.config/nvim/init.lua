@@ -2,6 +2,7 @@ require("eric")
 require("lualine").setup()
 require('telescope').load_extension('fzf')
 vim.o.termguicolors = true
+vim.o.winborder = "rounded"
 
 -- [[rust-analyzer]]
 -- Fix for https://github.com/neovim/neovim/issues/30985 whereby rust-analyzer
